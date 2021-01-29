@@ -17,13 +17,17 @@ public class CompraService {
 
 	static double percentual10 = 0.1, percentual20 = 0.2;
 
+	public List<Compra> listarCompras() {
+		return compras;
+	}
+	
 	public void cadastrar(Compra compra) {
 		compras.add(compra);
 		System.out.println(compra.getCliente().get(0).getId() + "; " + sdf.format(compra.getData()) + "; "
 				+ format.format(compra.getValor()));
 		System.out.println("Compara para o cliente " + compra.getCliente().get(0).getId() + " incluído");
 	}
-
+	
 	public char ultimoCaractere(String nomeCidade) {
 		if (nomeCidade != null && !nomeCidade.isEmpty()) {
 			return nomeCidade.charAt(nomeCidade.length() - 1);
@@ -47,5 +51,5 @@ public class CompraService {
 		}
 		return valorImposto;
 	}
-
+	
 }

@@ -7,7 +7,7 @@ import br.com.spassu.cliente.controller.ClienteController;
 public class App {
 
 	private ClienteController clienteController = new ClienteController();
-	
+
 	public static void main(String[] args) throws Exception {
 		App app = new App();
 		int opcaoMenu;
@@ -19,7 +19,7 @@ public class App {
 			app.chamaOperacao(opcaoMenu);
 		}
 	}
-	
+
 	public void chamaOperacao(int opcaoMenu) {
 		switch (opcaoMenu) {
 		case 1:
@@ -27,6 +27,15 @@ public class App {
 			break;
 		case 2:
 			clienteController.cadastro();
+			break;
+		case 3:
+			clienteController.atualizar();
+			break;
+		case 4:
+			clienteController.deletar();
+			break;
+		case 5:
+			clienteController.clienteById();
 			break;
 		case 9:
 			System.out.println("Finalizado");
@@ -36,11 +45,14 @@ public class App {
 			break;
 		}
 	}
-	
+
 	public void listaMenu() {
 		System.out.println("Selecione a opção:");
 		System.out.println("1 - Listar Clientes");
 		System.out.println("2 - Incluir Cliente");
+		System.out.println("3 - Alterar Cliente");
+		System.out.println("4 - Excluir Cliente");
+		System.out.println("5 - Consultar Cliente");
 		System.out.println("9 - Sair");
 	}
 

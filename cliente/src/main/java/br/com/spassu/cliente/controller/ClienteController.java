@@ -30,6 +30,7 @@ public class ClienteController {
 
 	public void atualizar() {
 		Scanner scanner = new Scanner(System.in);
+		System.out.println("Informe o ID: ");
 		Cliente cliente = clienteService.clienteById(scanner.nextInt());
 		if (cliente != null)
 			saveOrUpdate(cliente);
@@ -62,6 +63,7 @@ public class ClienteController {
 
 	public void deletar() {
 		Scanner scanner = new Scanner(System.in);
+		System.out.println("Informe o ID: ");
 		Cliente cliente = clienteService.clienteById(scanner.nextInt());
 		if (cliente != null)
 			clienteService.deletar(cliente);
@@ -71,6 +73,7 @@ public class ClienteController {
 
 	public void clienteById() {
 		Scanner scanner = new Scanner(System.in);
+		System.out.println("Informe o ID: ");
 		Cliente cliente = clienteService.clienteById(scanner.nextInt());
 		if (cliente != null)
 			System.out.println(cliente.getId() + " " + cliente.getNome() + " " + cliente.getCidade() + " ");

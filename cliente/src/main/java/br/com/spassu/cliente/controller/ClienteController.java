@@ -80,5 +80,14 @@ public class ClienteController {
 		else
 			System.out.println("Código inválido.");
 	}
+	
+	public Cliente getCliente() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("idCliente: ");
+		Cliente cliente = clienteService.clienteById(scanner.nextInt());
+		if (cliente == null)
+			System.out.println("Código cliente invalido.");
+		return cliente;
+	}
 
 }

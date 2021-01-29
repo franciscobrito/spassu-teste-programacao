@@ -3,10 +3,13 @@ package br.com.spassu.cliente;
 import java.util.Scanner;
 
 import br.com.spassu.cliente.controller.ClienteController;
+import br.com.spassu.cliente.controller.CompraController;
+import br.com.spassu.cliente.model.Cliente;
 
 public class App {
 
 	private ClienteController clienteController = new ClienteController();
+	private CompraController compraController = new CompraController();
 
 	public static void main(String[] args) throws Exception {
 		App app = new App();
@@ -37,6 +40,10 @@ public class App {
 		case 5:
 			clienteController.clienteById();
 			break;
+		case 6:
+			Cliente cliente = clienteController.getCliente();
+			compraController.cadastro(cliente);
+			break;
 		case 9:
 			System.out.println("Finalizado");
 			System.exit(0);
@@ -53,6 +60,7 @@ public class App {
 		System.out.println("3 - Alterar Cliente");
 		System.out.println("4 - Excluir Cliente");
 		System.out.println("5 - Consultar Cliente");
+		System.out.println("6 - Incluir Compra");
 		System.out.println("9 - Sair");
 	}
 

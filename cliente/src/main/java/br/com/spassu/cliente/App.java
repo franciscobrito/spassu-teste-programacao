@@ -47,6 +47,9 @@ public class App {
 		case 7:
 			compraController.listarCompra();
 			break;
+		case 8:
+			compraController.listarClienteEspecial();
+			break;
 		case 9:
 			System.out.println("Finalizado");
 			System.exit(0);
@@ -65,6 +68,7 @@ public class App {
 		System.out.println("5 - Consultar Cliente");
 		System.out.println("6 - Incluir Compra");
 		System.out.println("7 - Listar Compras");
+		System.out.println("8 - Listar Clientes Especiais");
 		System.out.println("9 - Sair");
 	}
 
